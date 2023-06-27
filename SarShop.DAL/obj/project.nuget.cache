@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7mLc7pUmHXQMnrpvsO82/eutCP92EVga4fiU4ov5n0UeWvgUXOfqyOODv6TPLb6zGP5IfgAgqEugXxP08nHp2w==",
+  "dgSpecHash": "YVfva3T8buG9N55beoD1da6joIW5PHFA2JdHawJlCSr7bat6P99f/Xx2XtZYuxeKmYh3Gq25PbpvLstCHmj8eg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj",
+  "projectFilePath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kaan\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Kaan\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gVbC1jXr3aQ03gPwAXDrEnLQKeYihGd0pyiUwqSopbn99r02Gu9QntCxN4qq+FL/zmIMaNhz66ueNxuoTfQPbQ==",
+  "dgSpecHash": "IhqUbsTd+H8axOZFXPjSLGzESpyb1mWmnIsTfQRg5xTJr0TCD8zc2/CGVcQn46bE3bS9RDGBW6na56MjPqbAhw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.WebUI\\SarShop.WebUI.csproj",
+  "projectFilePath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.WebUI\\SarShop.WebUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kaan\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Kaan\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

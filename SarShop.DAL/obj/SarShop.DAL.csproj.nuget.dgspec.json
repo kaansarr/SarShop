@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj": {}
+    "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj": {
+    "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj",
         "projectName": "SarShop.DAL",
-        "projectPath": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj",
+        "projectPath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj",
         "packagesPath": "C:\\Users\\Kaan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.DAL\\obj\\",
+        "outputPath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kaan\\AppData\\Roaming\\NuGet\\NuGet.Config",

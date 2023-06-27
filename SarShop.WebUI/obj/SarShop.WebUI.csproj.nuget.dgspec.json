@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.WebUI\\SarShop.WebUI.csproj": {}
+    "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.WebUI\\SarShop.WebUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.BL\\SarShop.BL.csproj": {
+    "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.BL\\SarShop.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.BL\\SarShop.BL.csproj",
+        "projectUniqueName": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.BL\\SarShop.BL.csproj",
         "projectName": "SarShop.BL",
-        "projectPath": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.BL\\SarShop.BL.csproj",
+        "projectPath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.BL\\SarShop.BL.csproj",
         "packagesPath": "C:\\Users\\Kaan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.BL\\obj\\",
+        "outputPath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kaan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj": {
-                "projectPath": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj"
+              "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj": {
+                "projectPath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj"
               }
             }
           }
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj": {
+    "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj",
         "projectName": "SarShop.DAL",
-        "projectPath": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj",
+        "projectPath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj",
         "packagesPath": "C:\\Users\\Kaan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.DAL\\obj\\",
+        "outputPath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kaan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -130,14 +130,14 @@
         }
       }
     },
-    "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.WebUI\\SarShop.WebUI.csproj": {
+    "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.WebUI\\SarShop.WebUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.WebUI\\SarShop.WebUI.csproj",
+        "projectUniqueName": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.WebUI\\SarShop.WebUI.csproj",
         "projectName": "SarShop.WebUI",
-        "projectPath": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.WebUI\\SarShop.WebUI.csproj",
+        "projectPath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.WebUI\\SarShop.WebUI.csproj",
         "packagesPath": "C:\\Users\\Kaan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.WebUI\\obj\\",
+        "outputPath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.WebUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kaan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -154,11 +154,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.BL\\SarShop.BL.csproj": {
-                "projectPath": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.BL\\SarShop.BL.csproj"
+              "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.BL\\SarShop.BL.csproj": {
+                "projectPath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.BL\\SarShop.BL.csproj"
               },
-              "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj": {
-                "projectPath": "C:\\Users\\Kaan\\Desktop\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj"
+              "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj": {
+                "projectPath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.DAL\\SarShop.DAL.csproj"
               }
             }
           }
