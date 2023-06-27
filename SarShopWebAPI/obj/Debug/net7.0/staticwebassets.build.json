@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "pxrPdMhjSWBgCqPPsKizRjzTmiWWneTXD1e/+US06ds=",
+  "Source": "SarShopWebAPI",
+  "BasePath": "_content/SarShopWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
