@@ -9,9 +9,11 @@ namespace SarShop.WebUI.Controllers
 	public class HomeController : Controller
 	{
 		IRepository<Slide> repoSlide;
+		IRepository<Product> repoProduct;
 		IRepository<Category> repoCate;
-		public HomeController(IRepository<Slide> _repoSlide, IRepository<Category> repoCate)
+		public HomeController(IRepository<Slide> _repoSlide, IRepository<Category> repoCate, IRepository<Product> _repoProduct)
 		{
+			repoProduct = _repoProduct;
 			repoSlide = _repoSlide;
 			this.repoCate= repoCate;
 		}
@@ -19,7 +21,8 @@ namespace SarShop.WebUI.Controllers
 		{
 			IndexVM indexVM = new IndexVM
 			{
-				Slides = repoSlide.GetAll().OrderBy(o => o.DisplayIndex)
+				Slides = repoSlide.GetAll().OrderBy(o => o.DisplayIndex),
+				Products= repoProduct.GetAll().Include(x => x.ProductPictures).OrderBy(x => Guid.NewGuid()).Take(50),
 
 			};
 			return View(indexVM);
