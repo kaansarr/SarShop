@@ -13,7 +13,7 @@
 			}
 			<div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
 				<ul class="list-unstyled">
-					<li><a class="btn btn-success text-white mt-2" asp-route-id="@Model.ID" asp-controller="Shop" asp-action="ProductDetail"><i class="far fa-eye"></i></a></li>
+					<li><a class="btn btn-success text-white mt-2" asp-route-id="@Model.ID" asp-controller="Shop" asp-action="ProductDetail"asp-route-name="@GeneralTools.URLConvert(Model.Name)"><i class="far fa-eye"></i></a></li>
 				</ul>
 			</div>
 		</div>
