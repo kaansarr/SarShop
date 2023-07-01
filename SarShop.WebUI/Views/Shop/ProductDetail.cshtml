@@ -61,14 +61,7 @@
 						<img class="card-img img-fluid" src="@Model.Product.ProductPictures.FirstOrDefault().Picture" alt="Card image cap" id="product-detail">
 					</div>
 					<div class="row">
-						<!--Start Controls-->
-						<div class="col-1 align-self-center">
-							<a href="/#multi-item-example" role="button" data-bs-slide="prev">
-								<i class="text-dark fas fa-chevron-left"></i>
-								<span class="sr-only">Previous</span>
-							</a>
-						</div>
-						<!--End Controls-->
+					
 						<!--Start Carousel Wrapper-->
 						<div id="multi-item-example" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel">
 							<!--Start Slides-->
@@ -94,14 +87,7 @@
 							<!--End Slides-->
 						</div>
 						<!--End Carousel Wrapper-->
-						<!--Start Controls-->
-						<div class="col-1 align-self-center">
-							<a href="/#multi-item-example" role="button" data-bs-slide="next">
-								<i class="text-dark fas fa-chevron-right"></i>
-								<span class="sr-only">Next</span>
-							</a>
-						</div>
-						<!--End Controls-->
+				
 					</div>
 				</div>
 				<!-- col end -->
@@ -171,20 +157,20 @@
 	<section class="py-5">
 		<div class="container">
 			<div class="row text-left p-2 pb-3">
-				<h4>Related Products</h4>
+				<h4>Bunlar da İlgini Çekebilir</h4>
 			</div>
 
 			<!--Start Carousel Wrapper-->
-			<div id="carousel-related-product">
-
-				@foreach (var item in Model.RelatedProducts)
+			
+				<div class="row">
+				@foreach (Product product in Model.RelatedProducts)
 				{
-					<partial name="_Product" model="item" />
-				}			
-
+					<partial name="_Product" model="@product" />
+				}
+				</div>
 				
 
-			</div>
+			
 
 
 		</div>

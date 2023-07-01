@@ -22,7 +22,7 @@ namespace SarShop.WebUI.Controllers
 			IndexVM indexVM = new IndexVM
 			{
 				Slides = repoSlide.GetAll().OrderBy(o => o.DisplayIndex),
-				Products= repoProduct.GetAll().Include(x => x.ProductPictures).OrderBy(x => Guid.NewGuid()).Take(50),
+				Products= repoProduct.GetAll().Include(x => x.ProductPictures).OrderBy(x => Guid.NewGuid()).Take(9),
 
 			};
 			return View(indexVM);
