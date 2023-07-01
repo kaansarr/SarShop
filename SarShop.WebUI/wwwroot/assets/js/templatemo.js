@@ -56,6 +56,7 @@ $(document).ready(function() {
 
 });
 
-function addCart(productid,stock) {
-    alert(productid)
+function addCart(productid, stock) {
+    istenenMiktar = parseInt($(".inputQuantity").val())
+    alert(istenenmiktar)
 }

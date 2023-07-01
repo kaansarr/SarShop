@@ -95,7 +95,20 @@
 					<div class="card">
 						<div class="card-body">
 							<h1 class="h2">@Model.Product.Name</h1>
-							<p class="h3 py-2">@Model.Product.Price</p>
+							<h4 class="p-stock" style="font-size: smaller">
+								Stok Durumu:
+								@if (Model.Product.Stock > 0)
+								{
+									<span style="color:green; font-size: smaller">Stokta Var</span>
+								}
+								else
+								{
+									<span style="color:red; font-size: smaller">Tükendi</span>
+								}
+							</h4>
+
+							<h6>Ürün Fiyatı</h6>
+							<p class="h3 py-2">@Model.Product.Price TL</p>
 
 
 
@@ -128,18 +141,20 @@
 										<ul class="list-inline pb-3">
 											<li class="list-inline-item text-right">
 												Quantity
-												<input type="hidden" name="product-quanity" id="product-quanity" value="1">
+												<input type="hidden" class="inputQuantity" name="product-quanity" id="product-quanity" value="1">
 											</li>
 											<li class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span></li>
-											<li class="list-inline-item"><span class="badge bg-secondary" id="var-value">1</span></li>
+											<li class="list-inline-item"><span class="badge bg-secondary SpanQuantity" id="var-value">1</span></li>
 											<li class="list-inline-item"><span class="btn btn-success" id="btn-plus">+</span></li>
 										</ul>
 									</div>
 								</div>
 								<div class="row pb-3">
-									
+
 									<div class="col d-grid">
-										<button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard" onclick="addCart(@Model.Product.ID)">Sepete Ekle</button>
+
+										<button onclick="addCart(@Model.Product.ID,@Model.Product.Stock)" class="btn btn-success btn-lg" value="addtocard">Sepete Ekle</button>
+
 									</div>
 								</div>
 							</form>
