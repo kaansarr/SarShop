@@ -55,3 +55,7 @@ $(document).ready(function() {
     // End roduct detail
 
 });
+
+function addCart(productid,stock) {
+    alert(productid)
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZOo4JKeOdtiL8+dRMqE7u1Ald+I13Eet0pDpSO0+8KY=",
+  "Hash": "CzxBAYFscduaMBwZx1S/+d/4spQbGtceMnUg8OrutE8=",
   "Source": "SarShop.WebUI",
   "BasePath": "_content/SarShop.WebUI",
   "Mode": "Default",
@@ -87497,40 +87497,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\productPicture\\99urun3.png"
-    },
-    {
-      "Identity": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.WebUI\\wwwroot\\img\\ShoesOfTheWeek\\135urunn4.jpg",
-      "SourceId": "SarShop.WebUI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.WebUI\\wwwroot\\",
-      "BasePath": "_content/SarShop.WebUI",
-      "RelativePath": "img/ShoesOfTheWeek/135urunn4.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\ShoesOfTheWeek\\135urunn4.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.WebUI\\wwwroot\\img\\ShoesOfTheWeek\\312urunn2.jpg",
-      "SourceId": "SarShop.WebUI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.WebUI\\wwwroot\\",
-      "BasePath": "_content/SarShop.WebUI",
-      "RelativePath": "img/ShoesOfTheWeek/312urunn2.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\ShoesOfTheWeek\\312urunn2.jpg"
     },
     {
       "Identity": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.WebUI\\wwwroot\\img\\slide\\101urun3.jpg",
