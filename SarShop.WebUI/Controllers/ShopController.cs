@@ -30,7 +30,14 @@ namespace SarShop.WebUI.Controllers
 		[Route("detay/{name}-{id}")]
 		public IActionResult ProductDetail(int id,string name)
 		{
-			return View(repoProduct.GetAll().Include(x=>x.ProductPictures).FirstOrDefault(x=>x.ID==id));
+			var productdetail = repoProduct.GetAll().Include(x => x.ProductPictures).FirstOrDefault(x => x.ID == id);
+			var products = repoProduct.GetAll().Include(x => x.ProductPictures).OrderBy(x => Guid.NewGuid()).Take(4);
+			ProductDetailVM vm = new ProductDetailVM
+			{
+				Product=productdetail,
+				RelatedProducts=products
+			};
+			return View(vm);	
 		}
 	}
 }
