@@ -57,6 +57,12 @@ $(document).ready(function() {
 });
 
 function addCart(productid, stock) {
-    istenenMiktar = parseInt($(".inputQuantity").val())
-    alert(istenenmiktar)
+    var istenenMiktar = parseInt($(".inputQuantity").val())
+    if (istenenMiktar <= stock) {
+
+    }
+    else {
+        $(".inputQuantity").val(stock);
+        alert("İstenen Miktar Stoktan Fazla...");
+    }
 }
