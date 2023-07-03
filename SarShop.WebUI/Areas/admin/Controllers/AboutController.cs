@@ -28,48 +28,84 @@ namespace SarShop.WebUI.Areas.admin.Controllers
 		}
 
 
-		[Route("admin/hakkimizda/yeni"), HttpPost]
-		public async Task<IActionResult> New(About model)
+		[HttpPost]
+		[Route("/admin/hakkimizda/yeni")]
+		public async Task<IActionResult> New([Bind("Title, Content")] About model)
 		{
-			
-			await repoAbout.Add(model);
-			return Redirect("/admin/hakkimizda");
+			if (ModelState.IsValid)
+			{
+				await repoAbout.Add(model);
+				return Redirect("/admin/hakkimizda");
+			}
+
+			return View(model);
 		}
 
-		[Route("/admin/hakkimizda/duzenle"), HttpPost]
-		public async Task<IActionResult> Edit(About model)
-		{
-
-			await repoAbout.Update(model);
-			return Redirect("/admin/hakkimizda");
-		}
-
-
+		[HttpGet]
 		[Route("/admin/hakkimizda/duzenle")]
 		public IActionResult Edit(int id)
 		{
-			return View(repoAbout.GetBy(x=>x.ID==id));
+			About about = repoAbout.GetBy(x => x.ID == id);
+			if (about == null)
+			{
+				return NotFound();
+			}
+
+			return View(about);
+		}
+
+		[HttpPost]
+		[Route("/admin/hakkimizda/duzenle")]
+		public async Task<IActionResult> Edit(int id, [Bind("ID, Title, Content")] About model)
+		{
+			if (id != model.ID)
+			{
+				return NotFound();
+			}
+
+			if (ModelState.IsValid)
+			{
+				try
+				{
+					await repoAbout.Update(model);
+				}
+				catch (Exception ex)
+				{
+					// Hata işleme kodu
+					return View(model);
+				}
+
+				return Redirect("/admin/hakkimizda");
+			}
+
+			return View(model);
 		}
 
 
 
 
 
-	
 
-		[Route("/admin/hakkimizda/sil"), HttpPost]
-        public async Task<string> Delete(int id)
-        {
+
+		[HttpPost]
+		[Route("/admin/hakkimizda/sil")]
+		public async Task<IActionResult> Delete(int id)
+		{
 			try
 			{
-				About about = repoAbout.GetBy(x => x.ID == id) ?? null;
-				if (about != null) await repoAbout.Delete(about);
-				return "OK";
+				About about = repoAbout.GetBy(x => x.ID == id);
+				if (about != null)
+				{
+					await repoAbout.Delete(about);
+					return Ok("OK");
+				}
+
+				return NotFound();
 			}
 			catch (Exception ex)
 			{
-
-				return ex.Message;
+				// Hata işleme kodu
+				return StatusCode(500, ex.Message);
 			}
 		}
 	}
