@@ -12,3 +12,17 @@ C:\Users\Kaan\Desktop\SarShop\SarShop.DAL\obj\Debug\net7.0\refint\SarShop.DAL.dl
 C:\Users\Kaan\Desktop\SarShop\SarShop.DAL\obj\Debug\net7.0\SarShop.DAL.pdb
 C:\Users\Kaan\Desktop\SarShop\SarShop.DAL\obj\Debug\net7.0\SarShop.DAL.genruntimeconfig.cache
 C:\Users\Kaan\Desktop\SarShop\SarShop.DAL\obj\Debug\net7.0\ref\SarShop.DAL.dll
+C:\Users\Kaan\Documents\GitHub\SarShop\SarShop.DAL\bin\Debug\net7.0\SarShop.DAL.deps.json
+C:\Users\Kaan\Documents\GitHub\SarShop\SarShop.DAL\bin\Debug\net7.0\SarShop.DAL.runtimeconfig.json
+C:\Users\Kaan\Documents\GitHub\SarShop\SarShop.DAL\bin\Debug\net7.0\SarShop.DAL.dll
+C:\Users\Kaan\Documents\GitHub\SarShop\SarShop.DAL\bin\Debug\net7.0\SarShop.DAL.pdb
+C:\Users\Kaan\Documents\GitHub\SarShop\SarShop.DAL\obj\Debug\net7.0\SarShop.DAL.csproj.AssemblyReference.cache
+C:\Users\Kaan\Documents\GitHub\SarShop\SarShop.DAL\obj\Debug\net7.0\SarShop.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kaan\Documents\GitHub\SarShop\SarShop.DAL\obj\Debug\net7.0\SarShop.DAL.AssemblyInfoInputs.cache
+C:\Users\Kaan\Documents\GitHub\SarShop\SarShop.DAL\obj\Debug\net7.0\SarShop.DAL.AssemblyInfo.cs
+C:\Users\Kaan\Documents\GitHub\SarShop\SarShop.DAL\obj\Debug\net7.0\SarShop.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Kaan\Documents\GitHub\SarShop\SarShop.DAL\obj\Debug\net7.0\SarShop.DAL.dll
+C:\Users\Kaan\Documents\GitHub\SarShop\SarShop.DAL\obj\Debug\net7.0\refint\SarShop.DAL.dll
+C:\Users\Kaan\Documents\GitHub\SarShop\SarShop.DAL\obj\Debug\net7.0\SarShop.DAL.pdb
+C:\Users\Kaan\Documents\GitHub\SarShop\SarShop.DAL\obj\Debug\net7.0\SarShop.DAL.genruntimeconfig.cache
+C:\Users\Kaan\Documents\GitHub\SarShop\SarShop.DAL\obj\Debug\net7.0\ref\SarShop.DAL.dll

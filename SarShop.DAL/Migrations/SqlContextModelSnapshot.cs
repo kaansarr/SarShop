@@ -22,6 +22,35 @@ namespace SarShop.DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("SarShop.DAL.Entities.About", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(250)
+                        .HasColumnType("varchar(250)");
+
+                    b.Property<string>("SubDescription")
+                        .HasMaxLength(2147483647)
+                        .HasColumnType("nvarchar(MAX)");
+
+                    b.Property<string>("SubTitle")
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("Title")
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("About");
+                });
+
             modelBuilder.Entity("SarShop.DAL.Entities.Admin", b =>
                 {
                     b.Property<int>("ID")
@@ -190,35 +219,6 @@ namespace SarShop.DAL.Migrations
                     b.HasIndex("ProductID");
 
                     b.ToTable("ProductPicture");
-                });
-
-            modelBuilder.Entity("SarShop.DAL.Entities.ShoesOfTheWeek", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
-
-                    b.Property<int>("DisplayIndex")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Link")
-                        .HasMaxLength(150)
-                        .HasColumnType("varchar(150)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
-
-                    b.Property<string>("Picture")
-                        .HasMaxLength(150)
-                        .HasColumnType("varchar(150)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("ShoesOfTheWeek");
                 });
 
             modelBuilder.Entity("SarShop.DAL.Entities.Slide", b =>
