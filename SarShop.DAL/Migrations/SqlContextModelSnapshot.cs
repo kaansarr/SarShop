@@ -22,7 +22,7 @@ namespace SarShop.DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("SarShop.DAL.Entities.About", b =>
+            modelBuilder.Entity("SarShop.DAL.Entities.Aboutt", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -31,16 +31,8 @@ namespace SarShop.DAL.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Description")
-                        .HasMaxLength(250)
-                        .HasColumnType("varchar(250)");
-
-                    b.Property<string>("SubDescription")
                         .HasMaxLength(2147483647)
-                        .HasColumnType("nvarchar(MAX)");
-
-                    b.Property<string>("SubTitle")
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(MAX)");
 
                     b.Property<string>("Title")
                         .HasMaxLength(50)

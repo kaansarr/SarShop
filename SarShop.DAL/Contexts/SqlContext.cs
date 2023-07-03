@@ -22,7 +22,9 @@ namespace SarShop.DAL.Contexts
         public DbSet<Product> Product { get; set; }
         public DbSet<ProductPicture> ProductPicture { get; set; }
         public DbSet<ProductCategory> ProductCategory { get; set; }
-        public DbSet<About> About { get; set; }
+        public DbSet<Aboutt> Abouttt { get; set; }
+       
+       
        
        
      
