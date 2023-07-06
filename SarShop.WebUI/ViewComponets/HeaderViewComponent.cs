@@ -8,7 +8,6 @@ namespace SarShop.WebUI.ViewComponets
 {
     public class HeaderViewComponent: ViewComponent
     {
-       
         public IViewComponentResult Invoke()
         {
             return View();

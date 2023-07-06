@@ -34,6 +34,9 @@ namespace SarShop.DAL.Migrations
                         .HasMaxLength(2147483647)
                         .HasColumnType("varchar(MAX)");
 
+                    b.Property<int>("DisplayIndex")
+                        .HasColumnType("int");
+
                     b.Property<string>("Title")
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");

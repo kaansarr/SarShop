@@ -10,12 +10,13 @@ namespace SarShop.WebUI.Controllers
 		IRepository<Aboutt> repoAbout;
 		public AboutController(IRepository<Aboutt> _repoAbout)
 		{
-			repoAbout= _repoAbout;
+			repoAbout = _repoAbout;
 		}
-		[Route("/hakkimizda")]
-		public IActionResult Index(int id)
+		[Route("/hakkimizda/{id}/{title}")]
+		public IActionResult Index(int id , string title)
 		{
-			return View(repoAbout.GetAll(x=>x.ID==id));
+			var response = repoAbout.GetBy(x => x.ID == id);
+			return View(response);
 		}
 	}
 }

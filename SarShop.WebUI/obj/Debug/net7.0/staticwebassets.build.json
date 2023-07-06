@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CzxBAYFscduaMBwZx1S/+d/4spQbGtceMnUg8OrutE8=",
+  "Hash": "QiYfkqDqDH/IPNdwpmjKJYMv8GismDJaj/QrvExN/yQ=",
   "Source": "SarShop.WebUI",
   "BasePath": "_content/SarShop.WebUI",
   "Mode": "Default",
@@ -87803,6 +87803,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\urunhazirlaniyor.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.WebUI\\wwwroot\\shoppingcart\\cart.css",
+      "SourceId": "SarShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop.WebUI\\wwwroot\\",
+      "BasePath": "_content/SarShop.WebUI",
+      "RelativePath": "shoppingcart/cart.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\shoppingcart\\cart.css"
     }
   ]
 }
