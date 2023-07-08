@@ -9,5 +9,10 @@ namespace SarShop.WebUI.Controllers
 		{
 			return View();
 		}
+		[Route("/sepetim/ekle")]
+		public string AddCart(int productid,int quantity)
+		{
+			return "X";
+		}
 	}
 }

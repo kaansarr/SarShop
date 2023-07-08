@@ -57,12 +57,21 @@ $(document).ready(function() {
 });
 
 function addCart(productid, stock) {
-    var istenenMiktar = parseInt($(".inputQuantity").val())
-    if (istenenMiktar <= stock) {
-
+    var istenenmiktar = parseInt($(".inputQuantity").val())
+    if (istenenmiktar <= stock) {
+        $.ajax({
+            url: "/sepetim/ekle",
+            type: "POST",
+            data: { productid: productid, quantity: stock },
+            success: function (data) {
+                if (data != "") {
+                    alert(data+"isimli ürün sepete eklendi...")
+                }
+            }
+        })
     }
     else {
         $(".inputQuantity").val(stock);
-        alert("İstenen Miktar Stoktan Fazla...");
+        alert("İstenen miktar stoktan fazla...");
     }
 }
