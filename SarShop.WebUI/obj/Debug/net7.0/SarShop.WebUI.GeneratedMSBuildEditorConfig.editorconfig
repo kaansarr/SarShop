@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Kaan\Documents\GitHub\SarShop\SarShop.WebUI
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Kaan/Documents/GitHub/SarShop/SarShop.WebUI/Areas/admin/Views/About/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcQWJvdXRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaan/Documents/GitHub/SarShop/SarShop.WebUI/Areas/admin/Views/About/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcQWJvdXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaan/Documents/GitHub/SarShop/SarShop.WebUI/Areas/admin/Views/About/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcQWJvdXRcTmV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Kaan/Documents/GitHub/SarShop/SarShop.WebUI/Areas/admin/Views/Brand/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcQnJhbmRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
