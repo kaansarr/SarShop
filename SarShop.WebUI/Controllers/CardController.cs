@@ -48,7 +48,9 @@ namespace SarShop.WebUI.Controllers
 						{
 							urunVarmi = true;
 							_cart.Quantity += quantity;
+							if (product.Stock < _cart.Quantity) _cart.Quantity = product.Stock;
 							break;
+							  
 						}
 
 
