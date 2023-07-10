@@ -53,7 +53,7 @@ $(document).ready(function() {
       return false;
     });
     // End roduct detail
-
+    getCartCounter();
 });
 
 function addCart(productid, stock) {
@@ -65,13 +65,25 @@ function addCart(productid, stock) {
             data: { productid: productid, quantity: istenenmiktar },
             success: function (data) {
                 if (data != "") {
-                    alert(data+"isimli ürün sepete eklendi...")
+                    alert(data + "isimli ürün sepete eklendi...")
+                    getCartCounter();
                 }
             }
-        })
+        });
     }
     else {
         $(".inputQuantity").val(stock);
         alert("İstenen miktar stoktan fazla...");
     }
+}
+
+function getCartCounter() {
+
+    $.ajax({
+        url: "/sepetim/sayiver",
+        type: "GET",       
+        success: function (data) {
+            $(".cartCounter").text(data);
+        }
+    }); 
 }

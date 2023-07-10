@@ -465,11 +465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShopWebAPI\\SarShopWebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShopWebAPI\\SarShopWebAPI.csproj",
       "projectName": "SarShopWebAPI",
-      "projectPath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShopWebAPI\\SarShopWebAPI.csproj",
+      "projectPath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShopWebAPI\\SarShopWebAPI.csproj",
       "packagesPath": "C:\\Users\\Kaan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShopWebAPI\\obj\\",
+      "outputPath": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShopWebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kaan\\AppData\\Roaming\\NuGet\\NuGet.Config",
