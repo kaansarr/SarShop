@@ -21,10 +21,15 @@ namespace SarShop.WebUI.Controllers
 		{
 			if (Request.Cookies["MyCart"] != null)
 			{
-				return View(JsonConvert.DeserializeObject<List<Cart>>(Request.Cookies["MyCart"]));
-			}
-			else return Redirect("/");
+				var cartItems = JsonConvert.DeserializeObject<List<Cart>>(Request.Cookies["MyCart"]);
 
+				if (cartItems.Count > 0)
+				{
+					return View(cartItems);
+				}
+			}
+
+			return Redirect("/");
 		}
 
 		[Route("/sepetim/sayiver")]
