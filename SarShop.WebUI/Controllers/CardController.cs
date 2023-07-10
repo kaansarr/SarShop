@@ -37,6 +37,21 @@ namespace SarShop.WebUI.Controllers
 			else return 0;
 		}
 
+		[Route("/sepetim/sil")]
+		public string RemoveCart(int productid)
+		{
+			if (Request.Cookies["MyCart"] != null)
+			{
+				List<Cart> carts = JsonConvert.DeserializeObject<List<Cart>>(Request.Cookies["MyCart"]);
+				carts.Remove(carts.FirstOrDefault(x => x.ID == productid));
+				CookieOptions cookieOptions = new();
+				cookieOptions.Expires = DateTime.Now.AddDays(3);
+				Response.Cookies.Append("MyCart", JsonConvert.SerializeObject(carts), cookieOptions);
+				return "OK";
+			}
+			else return "";
+		}
+
 
 		[Route("/sepetim/ekle")]
 		public string AddCart(int productid, int quantity)
