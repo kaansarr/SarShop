@@ -62,7 +62,7 @@ function addCart(productid, stock) {
         $.ajax({
             url: "/sepetim/ekle",
             type: "POST",
-            data: { productid: productid, quantity: stock },
+            data: { productid: productid, quantity: istenenmiktar },
             success: function (data) {
                 if (data != "") {
                     alert(data+"isimli ürün sepete eklendi...")
