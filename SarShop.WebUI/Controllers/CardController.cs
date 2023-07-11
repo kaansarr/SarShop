@@ -102,5 +102,11 @@ namespace SarShop.WebUI.Controllers
 			else return "";
 
 		}
+
+		[Route("/sepetim/tamamla")]
+		public IActionResult Complete()
+		{
+			return View();
+		}
 	}
 }

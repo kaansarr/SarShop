@@ -59,7 +59,7 @@
 								<div class="summary-item"><span class="text">Subtotal</span><span class="price">@(cart.Price*cart.Quantity)TL</span></div>
 								
 								<div class="summary-item"><span class="text">Genel Toplam</span><span class="price">@Model.Sum(x=>x.Price*x.Quantity)</span></div>
-								<button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
+								<a asp-controller="Card"asp-action="Complete" type="button" class="btn btn-primary btn-lg btn-block">Alışverişi Tamamla</a>
 							</div>
 						</div>
 					</div>

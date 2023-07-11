@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yrvoCEMTbyFfnpS5fz7CDkwJIhkTHBDC8jxSm2TTpjA=",
+  "Hash": "MuwBtLDrV80F/SR900xzSf4T7rZhKArt+yekVjeuPEo=",
   "Source": "SarShop.WebUI",
   "BasePath": "_content/SarShop.WebUI",
   "Mode": "Default",
@@ -86494,6 +86494,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ckeditor\\vendor\\promise.js"
+    },
+    {
+      "Identity": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\completecart\\complete.css",
+      "SourceId": "SarShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\",
+      "BasePath": "_content/SarShop.WebUI",
+      "RelativePath": "completecart/complete.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\completecart\\complete.css"
     },
     {
       "Identity": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\img\\productPicture\\1001puma4.jpg",

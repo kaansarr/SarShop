@@ -92,9 +92,13 @@ function removeCart(productid) {
     $.ajax({
         url: "/sepetim/sil",
         type: "POST",
-        data: { productid: productid},
+        data: { productid: productid },
         success: function (data) {
-            if (data != "OK") location.href = "/sepetim";
+            if (data === "OK") {
+                location.reload(); 
+            } else {
+                location.href = "/sepetim";
+            }
         }
     });
 }

@@ -20349,6 +20349,10 @@
       "PackagePath": "staticwebassets\\ckeditor\\vendor\\promise.js"
     },
     {
+      "Id": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\completecart\\complete.css",
+      "PackagePath": "staticwebassets\\completecart\\complete.css"
+    },
+    {
       "Id": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\img\\productPicture\\1001puma4.jpg",
       "PackagePath": "staticwebassets\\img\\productPicture\\1001puma4.jpg"
     },
