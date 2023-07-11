@@ -23,6 +23,8 @@ namespace SarShop.DAL.Contexts
         public DbSet<ProductPicture> ProductPicture { get; set; }
         public DbSet<ProductCategory> ProductCategory { get; set; }
         public DbSet<Aboutt> Abouttt { get; set; }
+        public DbSet<City> City { get; set; }
+        public DbSet<District> District { get; set; }
        
        
        
@@ -38,6 +40,10 @@ namespace SarShop.DAL.Contexts
 
 
             modelBuilder.Entity<Product>().HasOne(x=>x.Brand).WithMany(x=>x.Products).OnDelete(DeleteBehavior.SetNull);
+
+
+
+            modelBuilder.Entity<District>().HasOne(x=>x.City).WithMany(x=>x.Districts).OnDelete(DeleteBehavior.SetNull);
 
 
             modelBuilder.Entity<ProductCategory>().HasKey(x => new { x.ProductID, x.CategoryID });

@@ -132,6 +132,45 @@ namespace SarShop.DAL.Migrations
                     b.ToTable("Category");
                 });
 
+            modelBuilder.Entity("SarShop.DAL.Entities.City", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("City");
+                });
+
+            modelBuilder.Entity("SarShop.DAL.Entities.District", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<int?>("CityID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CityID");
+
+                    b.ToTable("District");
+                });
+
             modelBuilder.Entity("SarShop.DAL.Entities.Product", b =>
                 {
                     b.Property<int>("ID")
@@ -262,6 +301,16 @@ namespace SarShop.DAL.Migrations
                     b.Navigation("ParentCategory");
                 });
 
+            modelBuilder.Entity("SarShop.DAL.Entities.District", b =>
+                {
+                    b.HasOne("SarShop.DAL.Entities.City", "City")
+                        .WithMany("Districts")
+                        .HasForeignKey("CityID")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("City");
+                });
+
             modelBuilder.Entity("SarShop.DAL.Entities.Product", b =>
                 {
                     b.HasOne("SarShop.DAL.Entities.Brand", "Brand")
@@ -312,6 +361,11 @@ namespace SarShop.DAL.Migrations
                     b.Navigation("ProductCategories");
 
                     b.Navigation("SubCategories");
+                });
+
+            modelBuilder.Entity("SarShop.DAL.Entities.City", b =>
+                {
+                    b.Navigation("Districts");
                 });
 
             modelBuilder.Entity("SarShop.DAL.Entities.Product", b =>
