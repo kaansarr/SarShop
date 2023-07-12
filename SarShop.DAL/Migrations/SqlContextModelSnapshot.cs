@@ -171,6 +171,115 @@ namespace SarShop.DAL.Migrations
                     b.ToTable("District");
                 });
 
+            modelBuilder.Entity("SarShop.DAL.Entities.Order", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Address")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("CVV")
+                        .HasMaxLength(3)
+                        .HasColumnType("char(3)");
+
+                    b.Property<string>("CartNumber")
+                        .HasMaxLength(16)
+                        .HasColumnType("char(16)");
+
+                    b.Property<int?>("CityID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ExpMounth")
+                        .HasMaxLength(2)
+                        .HasColumnType("char(2)");
+
+                    b.Property<string>("ExpYear")
+                        .HasMaxLength(2)
+                        .HasColumnType("char(2)");
+
+                    b.Property<string>("IPNO")
+                        .HasMaxLength(20)
+                        .HasColumnType("varchar(20)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<string>("OrderNumber")
+                        .HasMaxLength(10)
+                        .HasColumnType("varchar(10)");
+
+                    b.Property<int>("OrderStatus")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PaymentOption")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("RecDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Surname")
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<string>("ZipCode")
+                        .HasMaxLength(5)
+                        .HasColumnType("char(5)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CityID");
+
+                    b.HasIndex("OrderNumber")
+                        .IsUnique()
+                        .HasDatabaseName("OrderNumberUnique")
+                        .HasFilter("[OrderNumber] IS NOT NULL");
+
+                    b.ToTable("Order");
+                });
+
+            modelBuilder.Entity("SarShop.DAL.Entities.OrderDetail", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<int>("OrderID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Picture")
+                        .HasMaxLength(150)
+                        .HasColumnType("varchar(150)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int?>("ProductID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("OrderID");
+
+                    b.HasIndex("ProductID");
+
+                    b.ToTable("OrderDetail");
+                });
+
             modelBuilder.Entity("SarShop.DAL.Entities.Product", b =>
                 {
                     b.Property<int>("ID")
@@ -311,6 +420,34 @@ namespace SarShop.DAL.Migrations
                     b.Navigation("City");
                 });
 
+            modelBuilder.Entity("SarShop.DAL.Entities.Order", b =>
+                {
+                    b.HasOne("SarShop.DAL.Entities.City", "City")
+                        .WithMany("Orders")
+                        .HasForeignKey("CityID")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("City");
+                });
+
+            modelBuilder.Entity("SarShop.DAL.Entities.OrderDetail", b =>
+                {
+                    b.HasOne("SarShop.DAL.Entities.Order", "Order")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("OrderID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SarShop.DAL.Entities.Product", "Product")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("SarShop.DAL.Entities.Product", b =>
                 {
                     b.HasOne("SarShop.DAL.Entities.Brand", "Brand")
@@ -366,10 +503,19 @@ namespace SarShop.DAL.Migrations
             modelBuilder.Entity("SarShop.DAL.Entities.City", b =>
                 {
                     b.Navigation("Districts");
+
+                    b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("SarShop.DAL.Entities.Order", b =>
+                {
+                    b.Navigation("OrderDetails");
                 });
 
             modelBuilder.Entity("SarShop.DAL.Entities.Product", b =>
                 {
+                    b.Navigation("OrderDetails");
+
                     b.Navigation("ProductCategories");
 
                     b.Navigation("ProductPictures");

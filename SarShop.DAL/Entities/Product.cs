@@ -44,6 +44,7 @@ namespace SarShop.DAL.Entities
         public ICollection< ProductPicture>ProductPictures { get; set; }
 
         public ICollection<ProductCategory> ProductCategories { get; set; }
+        public ICollection<OrderDetail> OrderDetails { get; set; }
 
 
 

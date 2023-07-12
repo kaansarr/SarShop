@@ -46,10 +46,19 @@ namespace SarShop.DAL.Contexts
             modelBuilder.Entity<District>().HasOne(x=>x.City).WithMany(x=>x.Districts).OnDelete(DeleteBehavior.SetNull);
 
 
-            modelBuilder.Entity<ProductCategory>().HasKey(x => new { x.ProductID, x.CategoryID });
+			modelBuilder.Entity<Order>().HasOne(x => x.City).WithMany(x => x.Orders).OnDelete(DeleteBehavior.SetNull);
+
+			modelBuilder.Entity<OrderDetail>().HasOne(x => x.Product).WithMany(x => x.OrderDetails).OnDelete(DeleteBehavior.SetNull);
+
+
+			modelBuilder.Entity<ProductCategory>().HasKey(x => new { x.ProductID, x.CategoryID });
 
 
             modelBuilder.Entity<Category>().HasOne(x=>x.ParentCategory).WithMany(x=>x.SubCategories).HasForeignKey(x=>x.ParentID);
+
+
+
+            modelBuilder.Entity<Order>().HasIndex(p => p.OrderNumber).IsUnique().HasDatabaseName("OrderNumberUnique");
 
 
             modelBuilder.Entity<Admin>().HasData(new Admin { ID = 1, Name = "Kaan", Surname = "Sar", UserName = "kaan", Password = "202cb962ac59075b964b07152d234b70" });
