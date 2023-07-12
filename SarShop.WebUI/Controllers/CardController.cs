@@ -3,7 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using SarShop.BL.Repositories;
 using SarShop.DAL.Entities;
+using SarShop.DAL.Migrations;
 using SarShop.WebUI.Models;
+using SarShop.WebUI.ViewModels;
 
 namespace SarShop.WebUI.Controllers
 {
@@ -11,10 +13,13 @@ namespace SarShop.WebUI.Controllers
 	{
 
 		IRepository<Product> repoProduct;
-		public CardController(IRepository<Product> _repoProduct)
+		IRepository<City> repoCity;
+		public CardController(IRepository<Product> _repoProduct, IRepository<City> _repoCity)
 		{
 			repoProduct = _repoProduct;
-		}
+            repoCity = _repoCity;
+
+        }
 
 		[Route("/sepetim")]
 		public IActionResult Index()
@@ -106,7 +111,12 @@ namespace SarShop.WebUI.Controllers
 		[Route("/sepetim/tamamla")]
 		public IActionResult Complete()
 		{
-			return View();
+			OrderVM orderVM = new OrderVM
+			{
+				Carts = JsonConvert.DeserializeObject<List<Cart>>(Request.Cookies["MyCart"]),
+				Cities=repoCity.GetAll().OrderBy(x=>x.Name)
+			};
+			return View(orderVM);
 		}
 	}
 }
