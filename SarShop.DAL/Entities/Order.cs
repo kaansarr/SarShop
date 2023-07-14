@@ -14,33 +14,33 @@ namespace SarShop.DAL.Entities
 		public int ID { get; set; }
 
 
-		[StringLength(10), Column(TypeName = "varchar(10)"), Display(Name = "Sipariş Numarası")]
+		[StringLength(10), Column(TypeName = "varchar(10)"), Display(Name = "Sipariş Numarası"),Required(ErrorMessage ="Sipariş Numarası boş geçilemez")]
 		public string OrderNumber { get; set; }
 
 
-		[StringLength(30), Column(TypeName = "varchar(30)"), Display(Name = "Ad")]
+		[StringLength(30), Column(TypeName = "varchar(30)"), Display(Name = "Ad"),Required(ErrorMessage = "Ad Bilgisi boş geçilemez")]
 		public string Name { get; set; }
 
-		[StringLength(30), Column(TypeName = "varchar(30)"), Display(Name = "Soyad")]
+		[StringLength(30), Column(TypeName = "varchar(30)"), Display(Name = "Soyad"), Required(ErrorMessage = "Soyad Bilgisi boş geçilemez")]
 		public string Surname { get; set; }
 
-		[StringLength(100), Column(TypeName = "varchar(100)"),Display(Name ="Adres Tanımı")]
+		[StringLength(100), Column(TypeName = "varchar(100)"),Display(Name ="Adres Tanımı"), Required(ErrorMessage = "Adres Bilgisi boş geçilemez")]
 		public string Address { get; set; }
 
 		[Display(Name ="Şehir")]
 		public int? CityID { get; set; }
 		public City City { get; set; }
 
-		[StringLength(5), Column(TypeName = "char(5)"), Display(Name = "Posta Kodu")]
+		[StringLength(5), Column(TypeName = "char(5)"), Display(Name = "Posta Kodu"),Required(ErrorMessage = "Posta Kodu boş geçilemez")]
 		public string ZipCode { get; set; }
 
-		[StringLength(16), Column(TypeName = "char(16)"), Display(Name = "Kart Numarası")]
+		[StringLength(16), Column(TypeName = "char(16)"), Display(Name = "Kart Numarası"), Required(ErrorMessage = "Kart numarası boş geçilemez")]
 		public string CartNumber { get; set; }
 
-		[StringLength(2), Column(TypeName = "char(2)"), Display(Name = "Kart Ayı")]
+		[StringLength(2), Column(TypeName = "char(2)"), Display(Name = "Kart Ayı"), Required(ErrorMessage = " Boş geçilemez")]
 		public string ExpMounth { get; set; }
 
-		[StringLength(2), Column(TypeName = "char(2)"), Display(Name = "Kart Yılı")]
+		[StringLength(2), Column(TypeName = "char(2)"), Display(Name = "Kart Yılı"), Required(ErrorMessage = " Boş geçilemez")]
 		public string ExpYear { get; set; }
 
 		[StringLength(3), Column(TypeName = "char(3)"), Display(Name = "Kart Yılı")]

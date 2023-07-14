@@ -118,5 +118,13 @@ namespace SarShop.WebUI.Controllers
 			};
 			return View(orderVM);
 		}
+
+		[Route("/sepetim/tamamla"),HttpPost]
+		public IActionResult Complete(OrderVM model)
+		{
+			TempData["Siparis"] = model.Order.Name + " " + model.Order.Surname + " siparişiniz başarıyla alınmıştır..."; 
+			return Redirect ("/");
+			
+		}
 	}
 }
