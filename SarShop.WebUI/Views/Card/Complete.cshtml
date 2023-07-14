@@ -1,7 +1,5 @@
 ﻿@model OrderVM
-@{
-	Layout = null;
-}
+
 
 
 <link rel="stylesheet" href="/completecart/complete.css" />
@@ -9,23 +7,26 @@
 
 <body>
 
-	<h2>Responsive Checkout Form</h2>
-	<p>Resize the browser window to see the effect. When the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other.</p>
+	<h2>Siparişi Tamamla</h2>
+	<br />
+	<br />
+	<br />
 	<div class="row">
 		<div class="col-75">
 			<div class="container">
-				<form class="checkout-form" asp-controller="Card" asp-action="Complete" method="post">
-					<div asp-validation-summary="All"></div>
+				<form class="/action_page.php" asp-controller="Card" asp-action="Complete" method="post">
+
 					<div class="row">
 						<div class="col-50">
 							<h3>Billing Address</h3>
 							<label for="fname"><i class="fa fa-user"></i> Ad</label>
 							<input asp-for="Order.Name" placeholder="Ad">
-							
+							<span asp-validation-for="Order.Name" class="text-danger"></span>
+
 
 							<label for="fname"><i class="fa fa-user"></i> Soyad</label>
 							<input asp-for="Order.Surname" placeholder="Soyad">
-							
+							<span asp-validation-for="Order.Surname" class="text-danger"></span>
 
 
 							<label for="city"><i class="fa fa-institution"></i> Şehir</label>
@@ -33,27 +34,28 @@
 								<option value="">Şehir Seçiniz</option>
 
 							</select>
-							
+							<span asp-validation-for="Order.CityID"></span>
 
 							<label for="adr"><i class="fa fa-address-card-o"></i> Adres</label>
 							<input asp-for="Order.Address" placeholder="Adres">
-							
-							
+							<span asp-validation-for="Order.Address"class="text-danger"></span>
+
+
 
 							<div class="row">
 
 								<div class="col-50">
 									<label for="zip">Posta Kodu</label>
 									<input asp-for="Order.ZipCode" placeholder="Posta Kodu">
-									
+									<span asp-validation-for="Order.ZipCode" class="text-danger"></span>
 
 								</div>
 							</div>
 
 
-							
 
-						
+
+
 						</div>
 
 						<div class="col-50">
@@ -68,42 +70,45 @@
 
 							<label for="ccnum">Kart Numarası</label>
 							<input asp-for="Order.CartNumber" placeholder="Kart Numarası">
-							
+							<span asp-validation-for="Order.CartNumber" class="text-danger"></span>
+
 
 							<label for="expmonth">Ay</label>
 							<input asp-for="Order.ExpMounth" placeholder="VALID">
-							
+							<span asp-validation-for="Order.ExpMounth" class="text-danger"></span>
+
 
 							<div class="row">
 								<div class="col-50">
 									<label for="expyear">Yıl</label>
 									<input asp-for="Order.ExpYear" placeholder="THRU">
-									
+									<span asp-validation-for="Order.ExpYear" class="text-danger"></span>
+
 								</div>
 								<div class="col-50">
 									<label for="cvv">CVV</label>
 									<input asp-for="Order.CVV" placeholder="CVV">
-									
+									<span asp-validation-for="Order.CVV" class="text-danger"></span>
+
 								</div>
-								
+
 								<div class="col-50">
-								<select asp-for="Order.PaymentOption" asp-items="Html.GetEnumSelectList<EPaymentOption>()">
-									<option value="">Ödeme Türü</option>
+									<select asp-for="Order.PaymentOption" asp-items="Html.GetEnumSelectList<EPaymentOption>()">
+										<option value="">Ödeme Türü</option>
 
-								</select>
-									
+									</select>
+									<span asp-validation-for="Order.PaymentOption" class="text-danger"></span>
+
 								</div>
 
-							
+
 
 
 							</div>
 						</div>
 
 					</div>
-					<label>
-						<input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-					</label>
+					
 					<input type="submit" value="Alışverişi Tamamla" class="btn">
 				</form>
 			</div>
@@ -127,8 +132,6 @@
 
 </body>
 
-<script src="/admin/vendors/jquery.validate.min.js"></script>
-<script src="/admin/vendors/jquery.validate.unobtrusive.js"></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
