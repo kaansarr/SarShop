@@ -1,4 +1,8 @@
-﻿@model OrderVM
+﻿@{
+	Layout = null;
+}
+
+@model OrderVM
 
 
 
@@ -20,17 +24,17 @@
 						<div class="col-50">
 							<h3>Billing Address</h3>
 							<label for="fname"><i class="fa fa-user"></i> Ad</label>
-							<input asp-for="Order.Name" placeholder="Ad">
+							<input required asp-for="Order.Name" placeholder="Ad">
 							<span asp-validation-for="Order.Name" class="text-danger"></span>
 
 
 							<label for="fname"><i class="fa fa-user"></i> Soyad</label>
-							<input asp-for="Order.Surname" placeholder="Soyad">
+							<input required asp-for="Order.Surname" placeholder="Soyad">
 							<span asp-validation-for="Order.Surname" class="text-danger"></span>
 
 
 							<label for="city"><i class="fa fa-institution"></i> Şehir</label>
-							<select asp-for="Order.City.ID" asp-items="Model.Cities.Select(x=>new SelectListItem{Text=x.Name,Value=x.ID.ToString()})">
+							<select asp-for="@Model.Order.CityID" asp-items="Model.Cities.Select(x=>new SelectListItem{Text=x.Name,Value=x.ID.ToString()})">
 								<option value="">Şehir Seçiniz</option>
 
 							</select>
@@ -135,3 +139,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="/admin/vendors/jquery.validate.min.js"></script>
+<script src="/admin/vendors/jquery.validate.unobtrusive.js"></script>
