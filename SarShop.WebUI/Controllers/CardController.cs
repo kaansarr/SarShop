@@ -124,22 +124,23 @@ namespace SarShop.WebUI.Controllers
 		}
 
 		[Route("/sepetim/tamamla"), HttpPost]
-		public  IActionResult Complete(OrderVM model)
+		public async Task  <IActionResult> Complete(OrderVM model)
 		{
 
 			model.Order.RecDate= DateTime.Now;
 			model.Order.IPNO = HttpContext.Connection.RemoteIpAddress.ToString();
 			model.Order.OrderStatus = EOrderStatus.Hazirlaniyor;
-			string orderNumber = repoOrder.GetAll().Any()? repoOrder.GetAll().OrderByDescending(x => x.ID).FirstOrDefault().ID.ToString():"1" + DateTime.Now.Millisecond.ToString() + DateTime.Now.Second.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Hour.ToString();
+			string orderNumber = repoOrder.GetAll().Any() ? repoOrder.GetAll().OrderByDescending(x => x.ID).FirstOrDefault().ID.ToString():"1" + DateTime.Now.Millisecond.ToString() + DateTime.Now.Second.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Hour.ToString();
 
 			if (orderNumber.Length > 10) orderNumber = orderNumber.Substring(0, 10);
 
 			model.Order.OrderNumber = orderNumber;
-			repoOrder.Add(model.Order);
+		    await	repoOrder.Add(model.Order);
 
 			foreach (Cart cart in JsonConvert.DeserializeObject<List<Cart>>(Request.Cookies["MyCart"]))
 			{
-				    repoOrderDetail.Add(new OrderDetail {OrderID=model.Order.ID,Name=cart.Name,Picture=cart.Picture,Price=cart.Price,ProductID=cart.ID,Quantity=cart.Quantity });
+				    OrderDetail orderDetail= new OrderDetail { OrderID=model.Order.ID,Name=cart.Name,Picture=cart.Picture,Price=cart.Price,ProductID=cart.ID,Quantity=cart.Quantity};
+			 await	repoOrderDetail.Add(orderDetail);
 			}
 			TempData["Siparis"] = model.Order.Name + " " + model.Order.Surname + " siparişiniz başarıyla alınmıştır..."; 
 			return Redirect ("/");
