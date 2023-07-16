@@ -24,13 +24,13 @@
 						<div class="col-50">
 							<h3>Billing Address</h3>
 							<label for="fname"><i class="fa fa-user"></i> Ad</label>
-							<input required asp-for="Order.Name" placeholder="Ad">
+							<input required asp-for="@Model.Order.Name" placeholder="Ad">
 							<span asp-validation-for="Order.Name" class="text-danger"></span>
 
 
 							<label for="fname"><i class="fa fa-user"></i> Soyad</label>
-							<input required asp-for="Order.Surname" placeholder="Soyad">
-							<span asp-validation-for="Order.Surname" class="text-danger"></span>
+							<input required asp-for="@Model.Order.Surname" placeholder="Soyad">
+							<span asp-validation-for="@Model.Order.Surname" class="text-danger"></span>
 
 
 							<label for="city"><i class="fa fa-institution"></i> Şehir</label>
@@ -41,8 +41,8 @@
 							<span asp-validation-for="Order.CityID"></span>
 
 							<label for="adr"><i class="fa fa-address-card-o"></i> Adres</label>
-							<input asp-for="Order.Address" placeholder="Adres">
-							<span asp-validation-for="Order.Address"class="text-danger"></span>
+							<input asp-for="@Model.Order.Address" placeholder="Adres">
+							<span asp-validation-for="@Model.Order.Address" class="text-danger"></span>
 
 
 
@@ -50,8 +50,8 @@
 
 								<div class="col-50">
 									<label for="zip">Posta Kodu</label>
-									<input asp-for="Order.ZipCode" placeholder="Posta Kodu">
-									<span asp-validation-for="Order.ZipCode" class="text-danger"></span>
+									<input asp-for="@Model.Order.ZipCode" placeholder="Posta Kodu">
+									<span asp-validation-for="@Model.Order.ZipCode" class="text-danger"></span>
 
 								</div>
 							</div>
@@ -74,34 +74,34 @@
 
 							<label for="ccnum">Kart Numarası</label>
 							<input asp-for="Order.CartNumber" placeholder="Kart Numarası">
-							<span asp-validation-for="Order.CartNumber" class="text-danger"></span>
+							<span asp-validation-for="@Model.Order.CartNumber" class="text-danger"></span>
 
 
 							<label for="expmonth">Ay</label>
 							<input asp-for="Order.ExpMounth" placeholder="VALID">
-							<span asp-validation-for="Order.ExpMounth" class="text-danger"></span>
+							<span asp-validation-for="@Model.Order.ExpMounth" class="text-danger"></span>
 
 
 							<div class="row">
 								<div class="col-50">
 									<label for="expyear">Yıl</label>
 									<input asp-for="Order.ExpYear" placeholder="THRU">
-									<span asp-validation-for="Order.ExpYear" class="text-danger"></span>
+									<span asp-validation-for="@Model.Order.ExpYear" class="text-danger"></span>
 
 								</div>
 								<div class="col-50">
 									<label for="cvv">CVV</label>
-									<input asp-for="Order.CVV" placeholder="CVV">
-									<span asp-validation-for="Order.CVV" class="text-danger"></span>
+									<input asp-for="@Model.Order.CVV" placeholder="CVV">
+									<span asp-validation-for="@Model.Order.CVV" class="text-danger"></span>
 
 								</div>
 
 								<div class="col-50">
-									<select asp-for="Order.PaymentOption" asp-items="Html.GetEnumSelectList<EPaymentOption>()">
+									<select asp-for="@Model.Order.PaymentOption" asp-items="Html.GetEnumSelectList<EPaymentOption>()">
 										<option value="">Ödeme Türü</option>
 
 									</select>
-									<span asp-validation-for="Order.PaymentOption" class="text-danger"></span>
+									<span asp-validation-for="@Model.Order.PaymentOption" class="text-danger"></span>
 
 								</div>
 
