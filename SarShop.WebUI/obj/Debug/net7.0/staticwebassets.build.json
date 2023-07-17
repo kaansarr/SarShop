@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MuwBtLDrV80F/SR900xzSf4T7rZhKArt+yekVjeuPEo=",
+  "Hash": "7cRFhDpmC3xm/KdGrYI75I6wNT3PusGEsC6aYFQoXAI=",
   "Source": "SarShop.WebUI",
   "BasePath": "_content/SarShop.WebUI",
   "Mode": "Default",
@@ -77690,6 +77690,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\slick-theme.min.css"
     },
     {
+      "Identity": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\assets\\css\\sweetalert.css",
+      "SourceId": "SarShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\",
+      "BasePath": "_content/SarShop.WebUI",
+      "RelativePath": "assets/css/sweetalert.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\sweetalert.css"
+    },
+    {
       "Identity": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\assets\\css\\templatemo.css",
       "SourceId": "SarShop.WebUI",
       "SourceType": "Discovered",
@@ -78453,6 +78470,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\slick.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\assets\\js\\sweetalert2.all.min.js",
+      "SourceId": "SarShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\",
+      "BasePath": "_content/SarShop.WebUI",
+      "RelativePath": "assets/js/sweetalert2.all.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\sweetalert2.all.min.js"
     },
     {
       "Identity": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\assets\\js\\templatemo.js",

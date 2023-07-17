@@ -3,6 +3,8 @@
 <html lang="tr">
 
 <head>
+
+	
 	<title>Zay Shop - Product Detail Page</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -152,7 +154,7 @@
 								<div class="row pb-3">
 
 									<div class="col d-grid">
-										<button onclick="addCart(@Model.Product.ID, @Model.Product.Stock);" class="btn btn-success btn-lg" value="addtocard">Sepete Ekle</button>
+										<button type="button" onclick="addCart(@Model.Product.ID, @Model.Product.Stock);" class="btn btn-success btn-lg" value="addtocard">Sepete Ekle</button>
 									</div>
 								</div>
 							</form>
@@ -191,6 +193,7 @@
 	<script src="/assets/js/jquery-1.11.0.min.js"></script>
 	<script src="/assets/js/jquery-migrate-1.2.1.min.js"></script>
 	<script src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/js/sweetalert2.all.min.js"></script>
 	<script src="/assets/js/templatemo.js"></script>
 	<script src="/assets/js/custom.js"></script>
 	<!-- End Script -->
@@ -232,3 +235,4 @@
 </body>
 
 </html>
+

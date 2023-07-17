@@ -18277,6 +18277,10 @@
       "PackagePath": "staticwebassets\\assets\\css\\slick.min.css"
     },
     {
+      "Id": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\assets\\css\\sweetalert.css",
+      "PackagePath": "staticwebassets\\assets\\css\\sweetalert.css"
+    },
+    {
       "Id": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\assets\\css\\templatemo.css",
       "PackagePath": "staticwebassets\\assets\\css\\templatemo.css"
     },
@@ -18455,6 +18459,10 @@
     {
       "Id": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\assets\\js\\slick.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\assets\\js\\sweetalert2.all.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\sweetalert2.all.min.js"
     },
     {
       "Id": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\assets\\js\\templatemo.js",

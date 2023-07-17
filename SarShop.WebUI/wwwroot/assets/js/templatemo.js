@@ -57,7 +57,7 @@ $(document).ready(function() {
 });
 
 function addCart(productid, stock) {
-    var istenenmiktar = parseInt($(".inputQuantity").val())
+    var istenenmiktar = parseInt($(".inputQuantity").val());
     if (istenenmiktar <= stock) {
         $.ajax({
             url: "/sepetim/ekle",
@@ -65,9 +65,21 @@ function addCart(productid, stock) {
             data: { productid: productid, quantity: istenenmiktar },
             success: function (data) {
                 if (data != "") {
-                    alert(data + "isimli ürün sepete eklendi...")
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Başarılı!',
+                        text: 'Ürün sepete eklendi.'
+                    });
+
                     getCartCounter();
                 }
+            },
+            error: function () {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Hata!',
+                    text: 'Ürün sepete eklenirken bir hata oluştu.'
+                });
             }
         });
     }
@@ -75,6 +87,8 @@ function addCart(productid, stock) {
         $(".inputQuantity").val(stock);
         alert("İstenen miktar stoktan fazla...");
     }
+
+    return false; // Bu satır, postback'u engeller
 }
 
 function getCartCounter() {
