@@ -146,7 +146,7 @@ namespace SarShop.WebUI.Controllers
 			}
 			Response.Cookies.Delete("MyCart");
 			
-			TempData["Siparis"] = model.Order.Name + " " + model.Order.Surname + " siparişiniz başarıyla alındı...";
+			TempData["Siparis"] ="Sayın"+ model.Order.Name + " " + model.Order.Surname + " siparişiniz başarıyla alındı...";
 			return Redirect("/");
 		}
 	}
