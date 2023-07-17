@@ -92,17 +92,7 @@ function addCart(productid, stock) {
 }
 
 
-function showSuccessMessage(event) {
-    event.preventDefault();
 
-    Swal.fire({
-        title: 'Good job!',
-        text: 'You clicked the button!',
-        icon: 'success'
-    });
-
-    return false; // Bu satır, postback'u engeller
-}
 
 function getCartCounter() {
 
