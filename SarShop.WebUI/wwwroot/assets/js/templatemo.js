@@ -54,6 +54,15 @@ $(document).ready(function() {
     });
     // End roduct detail
     getCartCounter();
+
+    if ($(".siparis").text() !== "") {
+        Swal.fire(
+            'Tebrikler!',
+            $(".siparis").text(),
+            'success'
+        );
+    }
+
 });
 
 function addCart(productid, stock) {
