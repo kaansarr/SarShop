@@ -171,6 +171,38 @@ namespace SarShop.DAL.Migrations
                     b.ToTable("District");
                 });
 
+            modelBuilder.Entity("SarShop.DAL.Entities.Members", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<string>("Password")
+                        .HasMaxLength(32)
+                        .HasColumnType("varchar(32)");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Members");
+                });
+
             modelBuilder.Entity("SarShop.DAL.Entities.Order", b =>
                 {
                     b.Property<int>("ID")
@@ -180,6 +212,7 @@ namespace SarShop.DAL.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Address")
+                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
 
@@ -188,6 +221,7 @@ namespace SarShop.DAL.Migrations
                         .HasColumnType("char(3)");
 
                     b.Property<string>("CartNumber")
+                        .IsRequired()
                         .HasMaxLength(16)
                         .HasColumnType("char(16)");
 
@@ -195,10 +229,12 @@ namespace SarShop.DAL.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ExpMounth")
+                        .IsRequired()
                         .HasMaxLength(2)
                         .HasColumnType("char(2)");
 
                     b.Property<string>("ExpYear")
+                        .IsRequired()
                         .HasMaxLength(2)
                         .HasColumnType("char(2)");
 
@@ -207,10 +243,12 @@ namespace SarShop.DAL.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("varchar(30)");
 
                     b.Property<string>("OrderNumber")
+                        .IsRequired()
                         .HasMaxLength(10)
                         .HasColumnType("varchar(10)");
 
@@ -224,10 +262,12 @@ namespace SarShop.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Surname")
+                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("varchar(30)");
 
                     b.Property<string>("ZipCode")
+                        .IsRequired()
                         .HasMaxLength(5)
                         .HasColumnType("char(5)");
 
@@ -237,8 +277,7 @@ namespace SarShop.DAL.Migrations
 
                     b.HasIndex("OrderNumber")
                         .IsUnique()
-                        .HasDatabaseName("OrderNumberUnique")
-                        .HasFilter("[OrderNumber] IS NOT NULL");
+                        .HasDatabaseName("OrderNumberUnique");
 
                     b.ToTable("Order");
                 });

@@ -25,6 +25,7 @@ namespace SarShop.DAL.Contexts
         public DbSet<Aboutt> Abouttt { get; set; }
         public DbSet<City> City { get; set; }
         public DbSet<District> District { get; set; }
+        public DbSet<Members> Members { get; set; }
        
        
        
