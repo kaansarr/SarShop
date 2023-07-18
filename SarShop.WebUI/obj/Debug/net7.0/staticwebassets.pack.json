@@ -18249,6 +18249,10 @@
       "PackagePath": "staticwebassets\\admin\\vendors\\validator\\validator.js"
     },
     {
+      "Id": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\assets\\css\\Login.css",
+      "PackagePath": "staticwebassets\\assets\\css\\Login.css"
+    },
+    {
       "Id": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\assets\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
     },

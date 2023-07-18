@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7cRFhDpmC3xm/KdGrYI75I6wNT3PusGEsC6aYFQoXAI=",
+  "Hash": "dLfjpHDK4Z4dHnnThGYvk/9F4z76HZBmf8zhkNjIi0o=",
   "Source": "SarShop.WebUI",
   "BasePath": "_content/SarShop.WebUI",
   "Mode": "Default",
@@ -77637,6 +77637,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\fontawesome.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\assets\\css\\Login.css",
+      "SourceId": "SarShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\",
+      "BasePath": "_content/SarShop.WebUI",
+      "RelativePath": "assets/css/Login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\Login.css"
     },
     {
       "Identity": "C:\\Users\\Kaan\\Documents\\GitHub\\SarShop\\SarShop\\SarShop.WebUI\\wwwroot\\assets\\css\\slick.min.css",
