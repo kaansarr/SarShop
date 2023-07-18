@@ -117,8 +117,8 @@ namespace SarShop.WebUI.Controllers
 
 
 
-		[Authorize(AuthenticationSchemes = "SarShopMemberAuth"),Route("/sepetim/tamamla")]
-		
+		//[Authorize(AuthenticationSchemes = "SarShopMemberAuth"),Route("/sepetim/tamamla")]
+		[Route("/sepetim/tamamla")]
 		public IActionResult Complete()
 		{
 			OrderVM orderVM = new OrderVM
