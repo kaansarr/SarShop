@@ -43,7 +43,7 @@ namespace SarShop.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("About");
+                    b.ToTable("About", (string)null);
                 });
 
             modelBuilder.Entity("SarShop.DAL.Entities.Admin", b =>
@@ -75,7 +75,7 @@ namespace SarShop.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Admin");
+                    b.ToTable("Admin", (string)null);
 
                     b.HasData(
                         new
@@ -103,7 +103,7 @@ namespace SarShop.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Brand");
+                    b.ToTable("Brand", (string)null);
                 });
 
             modelBuilder.Entity("SarShop.DAL.Entities.Category", b =>
@@ -129,7 +129,7 @@ namespace SarShop.DAL.Migrations
 
                     b.HasIndex("ParentID");
 
-                    b.ToTable("Category");
+                    b.ToTable("Category", (string)null);
                 });
 
             modelBuilder.Entity("SarShop.DAL.Entities.City", b =>
@@ -146,7 +146,7 @@ namespace SarShop.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("City");
+                    b.ToTable("City", (string)null);
                 });
 
             modelBuilder.Entity("SarShop.DAL.Entities.District", b =>
@@ -168,7 +168,7 @@ namespace SarShop.DAL.Migrations
 
                     b.HasIndex("CityID");
 
-                    b.ToTable("District");
+                    b.ToTable("District", (string)null);
                 });
 
             modelBuilder.Entity("SarShop.DAL.Entities.Members", b =>
@@ -200,7 +200,7 @@ namespace SarShop.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Members");
+                    b.ToTable("Members", (string)null);
                 });
 
             modelBuilder.Entity("SarShop.DAL.Entities.Order", b =>
@@ -279,7 +279,7 @@ namespace SarShop.DAL.Migrations
                         .IsUnique()
                         .HasDatabaseName("OrderNumberUnique");
 
-                    b.ToTable("Order");
+                    b.ToTable("Order", (string)null);
                 });
 
             modelBuilder.Entity("SarShop.DAL.Entities.OrderDetail", b =>
@@ -316,7 +316,7 @@ namespace SarShop.DAL.Migrations
 
                     b.HasIndex("ProductID");
 
-                    b.ToTable("OrderDetail");
+                    b.ToTable("OrderDetail", (string)null);
                 });
 
             modelBuilder.Entity("SarShop.DAL.Entities.Product", b =>
@@ -355,7 +355,7 @@ namespace SarShop.DAL.Migrations
 
                     b.HasIndex("BrandID");
 
-                    b.ToTable("Product");
+                    b.ToTable("Product", (string)null);
                 });
 
             modelBuilder.Entity("SarShop.DAL.Entities.ProductCategory", b =>
@@ -370,7 +370,7 @@ namespace SarShop.DAL.Migrations
 
                     b.HasIndex("CategoryID");
 
-                    b.ToTable("ProductCategory");
+                    b.ToTable("ProductCategory", (string)null);
                 });
 
             modelBuilder.Entity("SarShop.DAL.Entities.ProductPicture", b =>
@@ -400,7 +400,7 @@ namespace SarShop.DAL.Migrations
 
                     b.HasIndex("ProductID");
 
-                    b.ToTable("ProductPicture");
+                    b.ToTable("ProductPicture", (string)null);
                 });
 
             modelBuilder.Entity("SarShop.DAL.Entities.Slide", b =>
@@ -437,7 +437,7 @@ namespace SarShop.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Slide");
+                    b.ToTable("Slide", (string)null);
                 });
 
             modelBuilder.Entity("SarShop.DAL.Entities.Category", b =>

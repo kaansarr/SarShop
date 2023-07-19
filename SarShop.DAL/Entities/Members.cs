@@ -20,6 +20,9 @@ namespace SarShop.DAL.Entities
         [StringLength(30), Column(TypeName = "varchar(30)"), Required(ErrorMessage = "Yetkili soyadı boş geçilemez..."), Display(Name = "Üye Soyadı")]
         public string Surname { get; set; }
 
+		[StringLength(50), Column(TypeName = "varchar(50)"), Required(ErrorMessage = "Email boş geçilemez..."), Display(Name = "Email ")]
+		public string Email { get; set; }
+
         [StringLength(30), Column(TypeName = "varchar(30)"), Required(ErrorMessage = "Kullanıcı adı boş geçilemez..."), Display(Name = "Kullanıcı Adı")]
         public string UserName { get; set; }
 

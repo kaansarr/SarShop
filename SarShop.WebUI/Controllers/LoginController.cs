@@ -12,9 +12,9 @@ namespace SarShop.WebUI.Controllers
         IRepository<Members> repoMember;
         public LoginController(IRepository<Members> _repoMember)
         {
-            repoMember= _repoMember;
+            repoMember = _repoMember;
         }
-        [Route("/SarShopMemberAuth/login"), AllowAnonymous]
+        [Route("/uye"), AllowAnonymous]
         public IActionResult Index()
         {
             return View();
@@ -27,23 +27,23 @@ namespace SarShop.WebUI.Controllers
             return View();
         }
 
-        [Route("SarShopMemberAuth/login")]
-        public async Task<IActionResult> Login(string Username, string Password, string ReturnUrl)
-        {
+        //[Route("SarShopMemberAuth/login")]
+        //public async Task<IActionResult> Login(string Username, string Password, string ReturnUrl)
+        //{
 
-            Members members= repoMember.GetBy(x => x.UserName == Username && x.Password == Password) ?? null;
-            List<Claim> claims = new List<Claim> {
+        //    Members members = repoMember.GetBy(x => x.UserName == Username && x.Password == Password) ?? null;
+        //    List<Claim> claims = new List<Claim> {
 
-                                new Claim(ClaimTypes.PrimarySid, signCustomer.Id.ToString()),
-                                new Claim(ClaimTypes.Name, signCustomer.Name),
-                                 };
-            ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, "SarShopMemberAuth");
-            await HttpContext.SignInAsync("SarShopMemberAuth", new ClaimsPrincipal(claimsIdentity), new AuthenticationProperties() { IsPersistent = true });
-            return RedirectToAction("sepetim/tamamla");     
+        //                        new Claim(ClaimTypes.PrimarySid, signCustomer.Id.ToString()),
+        //                        new Claim(ClaimTypes.Name, signCustomer.Name),
+        //                         };
+        //    ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, "SarShopMemberAuth");
+        //    await HttpContext.SignInAsync("SarShopMemberAuth", new ClaimsPrincipal(claimsIdentity), new AuthenticationProperties() { IsPersistent = true });
+        //    return RedirectToAction("sepetim/tamamla");
 
 
 
-        }
+        //}
 
 
 
@@ -63,4 +63,5 @@ namespace SarShop.WebUI.Controllers
             }
 
         }
+    }
 }

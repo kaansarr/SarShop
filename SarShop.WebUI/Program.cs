@@ -21,18 +21,18 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 
 
-builder.Services.AddAuthentication(options =>
-{
-	options.DefaultAuthenticateScheme = "SarShopMemberAuth";
-	options.DefaultSignInScheme = "SarShopMemberAuth";
-	options.DefaultChallengeScheme = "SarShopMemberAuth";
-})
-	.AddCookie("SarShopMemberAuth", opt =>
-	{
-		opt.ExpireTimeSpan = TimeSpan.FromMinutes(60);
-		opt.LoginPath = "/uye-giris-Yap";
-		opt.LogoutPath = "/uye/logout";
-	});
+//builder.Services.AddAuthentication(options =>
+//{
+//	options.DefaultAuthenticateScheme = "SarShopMemberAuth";
+//	options.DefaultSignInScheme = "SarShopMemberAuth";
+//	options.DefaultChallengeScheme = "SarShopMemberAuth";
+//})
+//	.AddCookie("SarShopMemberAuth", opt =>
+//	{
+//		opt.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+//		opt.LoginPath = "/uye-giris-Yap";
+//		opt.LogoutPath = "/uye/logout";
+//	});
 
 
 
