@@ -65,6 +65,34 @@ $(document).ready(function() {
 
 });
 
+
+
+
+    var isRequesting = false;
+
+    function showProductsByCategory(categoryID) {
+        if (!isRequesting) {
+        isRequesting = true;
+    $.ajax({
+        url: '/Shop/GetProductsByCategory', 
+    type: 'GET',
+    data: {categoryID: categoryID },
+    success: function (data) {
+        $("#products-by-category").html(data);
+                },
+    error: function () {
+        alert('Ürünler yüklenirken bir hata oluştu.');
+                },
+    complete: function () {
+        isRequesting = false;
+                }
+            });
+        }
+    }
+
+
+
+
 function addCart(productid, stock) {
     var istenenmiktar = parseInt($(".inputQuantity").val());
     if (istenenmiktar <= stock) {

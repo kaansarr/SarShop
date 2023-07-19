@@ -15,19 +15,43 @@ namespace SarShop.WebUI.Controllers
 			repoCate = _repoCate;
 			repoProduct = _repoProduct;
 		}
-		public IActionResult Index()
-		{
-			var categories = repoCate.GetAll().Include(x => x.SubCategories).OrderBy(x => x.DisplayIndex).ThenBy(x => x.Name);
-			var products = repoProduct.GetAll().Include(x => x.ProductPictures).OrderBy(x => Guid.NewGuid()).Take(50);
-			ShopVM shopVM = new ShopVM
-			{
-				Categories = categories,
-				Products = products,
-			};
-			return View(shopVM);
-		}
+        public IActionResult Index()
+        {
+            var categories = repoCate.GetAll().Include(x => x.SubCategories).OrderBy(x => x.DisplayIndex).ThenBy(x => x.Name);
+            var products = repoProduct.GetAll().Include(x => x.ProductPictures).OrderBy(x => Guid.NewGuid()).Take(50);
+            ShopVM shopVM = new ShopVM
+            {
+                Categories = categories,
+                Products = products,
+            };
+            return View(shopVM);
+        }
 
-		[Route("detay/{name}-{id}")]
+
+        [HttpGet]
+        public IActionResult GetProductsByCategory(int? categoryID)
+        {
+            if (categoryID == null)
+            {
+                // Eğer categoryID null ise, tüm ürünleri döndür
+                var allProducts = repoProduct.GetAll().Include(x => x.ProductPictures).ToList();
+                return PartialView("ProductsByCategory", allProducts);
+            }
+
+            // Seçilen kategoriye ait ürünleri bulun
+            var productsByCategory = repoProduct.GetAll()
+                .Include(x => x.ProductPictures)
+                .Where(p => p.ProductCategories.Any(pc => pc.CategoryID == categoryID))
+                .ToList();
+
+            return PartialView("ProductsByCategory", productsByCategory);
+        }
+
+
+
+
+
+        [Route("detay/{name}-{id}")]
 		public IActionResult ProductDetail(int id,string name)
 		{
 
